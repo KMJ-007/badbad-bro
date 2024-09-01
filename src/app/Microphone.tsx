@@ -129,10 +129,10 @@ function Microphone() {
 
   useEffect(() => {
     const processQueue = async () => {
-      if (size > 0 && !isProcessing && isListening) {
+      if (size > 0 && !isProcessing && isListening && connection && first) {
         setProcessing(true);
         console.log("Sending audio data to Deepgram");
-        connection?.send(first);
+        connection.send(first);
         remove();
         setTimeout(() => setProcessing(false), 250);
       }
