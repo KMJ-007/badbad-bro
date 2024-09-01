@@ -169,7 +169,6 @@ function Microphone() {
           autostart={isAudioPlaying || isAnyProcessing}
           speed={isAnyProcessing ? 0.1 : 0.05}
           amplitude={isAnyProcessing ? 1.5 : 1}
-          className="absolute inset-0 opacity-50"
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <button 
